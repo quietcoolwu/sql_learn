@@ -3,9 +3,9 @@ services:
   mysql:
     image: mysql:5.7
     volumes:
-      - $PWD/../sql/create.sql:/docker-entrypoint-initdb.d/init.sql
+      - ${PWD}/misc/sql/create.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       - MYSQL_DATABASE=demo
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=demo
     ports:
       - "3306:3306"

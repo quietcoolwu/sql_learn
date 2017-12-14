@@ -1,5 +1,5 @@
 up:
-	@bash -x ./scripts/start_db_mq.sh || true
+	@docker-compose -f ${PWD}/misc/compose/docker-compose-test.yml up -d
 
 down:
-	@bash -x ./scripts/stop_db_mq.sh || true
+	@docker-compose -f ${PWD}/misc/compose/docker-compose-test.yml down -v
