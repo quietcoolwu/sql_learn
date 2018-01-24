@@ -8,9 +8,9 @@ cd ..
 PWD=`pwd`
 
 docker stop sql_learn
-# docker stop edge_mongo
+docker stop mongo_learn
 # docker stop edge_mq
 
 docker rm sql_learn
-# docker rm edge_mongo
+docker rm mongo_learn
 # docker rm edge_mq

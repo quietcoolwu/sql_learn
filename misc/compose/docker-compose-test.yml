@@ -1,6 +1,6 @@
 version: '2'
 services:
-  mysql:
+  mysql_learn:
     image: mysql:5.7
     volumes:
       - ${PWD}/misc/sql/create.sql:/docker-entrypoint-initdb.d/init.sql
@@ -8,4 +8,9 @@ services:
       - MYSQL_DATABASE=demo
       - MYSQL_ROOT_PASSWORD=demo
     ports:
-      - "3306:3306"
+      - "4306:3306"
+
+  mongo_learn:
+    image: mongo:3
+    ports:
+      - "37017:27017"
